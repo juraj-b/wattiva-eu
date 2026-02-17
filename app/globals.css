@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wattiva-primary: #8C21F8;
+  --color-wattiva-dark: #27153C;
+  --color-wattiva-light: #F5EAFE;
+  --color-wattiva-accent: #A958FA;
+
+  --font-clash: "ClashDisplay", sans-serif;
+  --font-archivo: "Archivo", sans-serif;
+}
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("../fonts/clash-display/ClashDisplay-Variable.woff2") format("woff2"),
+       url("../fonts/clash-display/ClashDisplay-Variable.woff") format("woff"),
+       url("../fonts/clash-display/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100dvh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-archivo);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #8C21F8, #A958FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(140, 33, 248, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(140, 33, 248, 0.7); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
