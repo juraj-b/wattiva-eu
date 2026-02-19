@@ -49,7 +49,7 @@ export default function SlideQuestionIsland({
           <motion.div
             key={currentSlide}
             className={cn(
-              "rounded-b-2xl backdrop-blur-md px-6 py-2.5 pointer-events-auto",
+              "rounded-b-2xl backdrop-blur-md px-6 py-2.5 pointer-events-auto whitespace-nowrap",
               isDark ? "bg-white/10" : "bg-wattiva-dark/10"
             )}
             initial={{ y: "-100%" }}

@@ -27,7 +27,7 @@ export default function SlideContainer({
     >
       <div
         className={cn(
-          "w-full h-full max-w-[177.78dvh] max-h-[56.25vw] max-md:max-w-none max-md:max-h-none mx-auto px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col justify-center max-md:justify-start relative max-md:pt-14 max-md:pb-20",
+          "w-full h-full max-w-[177.78dvh] max-h-[56.25vw] max-md:max-w-none max-md:max-h-none max-md:h-auto mx-auto px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col justify-center max-md:justify-start relative max-md:pt-20 max-md:pb-44",
           innerClassName
         )}
       >

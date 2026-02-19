@@ -112,7 +112,7 @@ const stats = [
     descColor: "text-wattiva-light/70",
     rows: [
       { num: "2.6 MW", desc: "flexible power on call" },
-      { num: "62 MWh", desc: "shifted to cheap windows" },
+      { num: "410 MWh", desc: "shifted to cheap windows" },
       { num: "Charge load", desc: "modulated actively" },
     ],
   },
@@ -163,10 +163,10 @@ export default function Slide06bEVCharging() {
         {/* Chart */}
         <motion.div
           variants={fadeUp}
-          className="mt-4 md:mt-6 w-full flex-1 min-h-[280px] md:min-h-0 outline-none [&_svg]:outline-none [&_svg]:focus:outline-none"
+          className="mt-4 md:mt-6 w-full max-md:h-[24rem] md:flex-1 outline-none [&_svg]:outline-none [&_svg]:focus:outline-none"
         >
           <div className="w-full h-full max-md:overflow-x-auto">
-            <div className="w-full h-full max-md:min-w-[560px]">
+            <div className="w-full h-full max-md:min-w-[56rem]">
               <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
               data={data}

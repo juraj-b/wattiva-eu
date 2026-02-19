@@ -19,11 +19,11 @@ export default function Slide10CTA() {
         {/* Mobile mascot — stacked above content, hidden on desktop */}
         <motion.div
           variants={fadeIn}
-          className="md:hidden flex justify-center mb-4"
+          className="md:hidden flex justify-center mb-8"
         >
           <WattivaCharacter
             className=""
-            style={{ width: "12rem" }}
+            style={{ width: "16rem" }}
           />
         </motion.div>
 
