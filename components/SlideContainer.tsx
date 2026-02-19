@@ -6,24 +6,31 @@ interface SlideContainerProps {
   variant: "dark" | "light";
   children: React.ReactNode;
   className?: string;
+  innerClassName?: string;
 }
 
 export default function SlideContainer({
   variant,
   children,
   className,
+  innerClassName,
 }: SlideContainerProps) {
   return (
     <div
       className={cn(
-        "h-dvh w-screen overflow-hidden relative flex items-center justify-center",
+        "h-dvh w-screen overflow-hidden max-md:overflow-y-auto relative flex items-center justify-center max-md:items-start",
         variant === "dark"
           ? "bg-wattiva-dark text-wattiva-light"
           : "bg-wattiva-light text-wattiva-dark",
         className
       )}
     >
-      <div className="w-full h-full max-w-[177.78dvh] max-h-[56.25vw] mx-auto px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col justify-center relative">
+      <div
+        className={cn(
+          "w-full h-full max-w-[177.78dvh] max-h-[56.25vw] max-md:max-w-none max-md:max-h-none mx-auto px-6 md:px-12 lg:px-20 xl:px-28 flex flex-col justify-center max-md:justify-start relative max-md:pt-14 max-md:pb-20",
+          innerClassName
+        )}
+      >
         {children}
       </div>
     </div>

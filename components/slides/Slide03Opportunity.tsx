@@ -36,7 +36,7 @@ export default function Slide03Opportunity() {
         variants={staggerContainer(0.12, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full"
+        className="flex flex-col justify-center h-full max-md:h-auto"
       >
         <motion.h2
           variants={fadeUp}
@@ -47,15 +47,15 @@ export default function Slide03Opportunity() {
         </motion.h2>
 
         {/* Three stat cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mt-6 md:mt-12">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
             >
               <Card className="bg-wattiva-dark h-full">
-                <CardContent className="p-6 md:p-8">
-                  <div className="font-[family-name:var(--font-clash)] font-bold text-3xl md:text-4xl lg:text-5xl text-wattiva-light">
+                <CardContent className="p-4 md:p-8">
+                  <div className="font-[family-name:var(--font-clash)] font-bold text-2xl md:text-4xl lg:text-5xl text-wattiva-light">
                     {stat.value !== null ? (
                       <AnimatedNumber
                         value={stat.value}
@@ -81,7 +81,7 @@ export default function Slide03Opportunity() {
         {/* Supporting text */}
         <motion.p
           variants={fadeIn}
-          className="text-wattiva-dark font-medium text-[1.5em] max-w-xl mt-6 md:mt-8 leading-relaxed"
+          className="text-wattiva-dark font-medium text-sm md:text-[1.5em] slide-copy mt-4 md:mt-8 leading-relaxed"
         >
           In mature markets like the Netherlands, leading aggregators
           see €500–1,000+ per household. The value is real and growing.

@@ -53,7 +53,7 @@ export default function Slide11TechAppendix() {
         variants={staggerContainer(0.08, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full"
+        className="flex flex-col justify-center h-full max-md:h-auto"
       >
         <motion.h2
           variants={fadeUp}

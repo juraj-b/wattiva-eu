@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 
-const TOTAL_SLIDES = 12;
+const TOTAL_SLIDES = 13;
 const TRANSITION_LOCK_MS = 700;
 
 export function useSlideNavigation() {

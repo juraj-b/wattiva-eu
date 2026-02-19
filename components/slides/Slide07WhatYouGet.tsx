@@ -30,7 +30,7 @@ export default function Slide07WhatYouGet() {
         variants={staggerContainer(0.14, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full"
+        className="flex flex-col justify-center h-full max-md:h-auto"
       >
         <motion.h2
           variants={fadeUp}
@@ -40,26 +40,26 @@ export default function Slide07WhatYouGet() {
           <span className="text-wattiva-primary">Reduce churn.</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mt-8 md:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 mt-6 md:mt-12">
           {cards.map((card) => (
             <motion.div
               key={card.title}
               variants={fadeUp}
-              className="rounded-2xl bg-wattiva-dark text-wattiva-light p-6 md:p-7 lg:p-8"
+              className="rounded-2xl bg-wattiva-dark text-wattiva-light p-4 md:p-7 lg:p-8"
             >
-              <div className="mb-4">
+              <div className="mb-3 md:mb-4">
                 <Image
                   src={card.icon}
                   alt=""
                   width={56}
                   height={56}
-                  className="w-12 h-12 md:w-14 md:h-14 opacity-80"
+                  className="w-9 h-9 md:w-14 md:h-14 opacity-80"
                 />
               </div>
               <h3 className="font-[family-name:var(--font-clash)] font-semibold text-xl sm:text-2xl md:text-3xl tracking-tight text-wattiva-light">
                 {card.title}
               </h3>
-              <p className="text-wattiva-light text-sm md:text-base leading-relaxed mt-3">
+              <p className="text-wattiva-light text-sm md:text-base leading-relaxed mt-2 md:mt-3">
                 {card.body}
               </p>
             </motion.div>

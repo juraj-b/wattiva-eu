@@ -35,6 +35,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Typography & wrapping system ── */
+
+/* Overflow safety — prevents long strings from blowing up layout */
+p, li, td, dd, figcaption {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Headlines: use break-word (only break as last resort, never mid-word eagerly) */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/*
+ * text-wrap: balance compresses lines on narrow viewports (mobile)
+ * with large display fonts — only use it above md where there's enough width
+ * for the algorithm to actually improve aesthetics.
+ */
+@media (min-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+}
+
+/* Body copy: pretty wrapping (avoids single-word orphans) */
+p, li {
+  text-wrap: pretty;
+}
+
+/* Reusable slide copy wrapper — controls reading measure */
+.slide-copy {
+  max-width: 65ch;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+
 .text-gradient {
   background: linear-gradient(135deg, #8C21F8, #A958FA);
   -webkit-background-clip: text;

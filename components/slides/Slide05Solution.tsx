@@ -40,7 +40,7 @@ export default function Slide05Solution() {
         variants={staggerContainer(0.14, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full"
+        className="flex flex-col justify-center h-full max-md:h-auto"
       >
         <motion.h2
           variants={fadeUp}
@@ -52,7 +52,7 @@ export default function Slide05Solution() {
         </motion.h2>
 
         {/* Three step cards — equal height via grid stretch */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mt-8 md:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 mt-6 md:mt-12">
           {/* ── 1. CONNECT ── */}
           <motion.div
             variants={fadeUp}

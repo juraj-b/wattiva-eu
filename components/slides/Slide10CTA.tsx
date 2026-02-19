@@ -14,10 +14,21 @@ export default function Slide10CTA() {
         variants={staggerContainer(0.12, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full py-10 md:py-16"
+        className="flex flex-col justify-center h-full max-md:h-auto py-10 md:py-16"
       >
+        {/* Mobile mascot — stacked above content, hidden on desktop */}
+        <motion.div
+          variants={fadeIn}
+          className="md:hidden flex justify-center mb-4"
+        >
+          <WattivaCharacter
+            className=""
+            style={{ width: "12rem" }}
+          />
+        </motion.div>
+
         {/* Logo */}
-        <motion.div variants={fadeIn} className="mb-8 md:mb-12">
+        <motion.div variants={fadeIn} className="mb-6 md:mb-12">
           <Image
             src="/images/wattiva logomark white.svg"
             alt="Wattiva"
@@ -31,15 +42,16 @@ export default function Slide10CTA() {
         <div>
           <motion.h2
             variants={fadeUp}
-            className="font-[family-name:var(--font-clash)] font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight"
+            className="font-[family-name:var(--font-clash)] font-semibold text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] tracking-tight"
           >
             Your customers own the flexibility.
-            <br />
+            <br className="max-md:hidden" />
+            {" "}
             <span className="text-wattiva-accent">We will help you monetize it.</span>
           </motion.h2>
 
           <motion.div variants={fadeUp} className="mt-8 md:mt-10">
-            <p className="font-[family-name:var(--font-clash)] text-wattiva-light text-xl md:text-2xl lg:text-3xl font-semibold">
+            <p className="font-[family-name:var(--font-clash)] text-wattiva-light text-lg md:text-2xl lg:text-3xl font-semibold">
               Next step: 30-minute platform demo
             </p>
             <ul className="mt-4 space-y-2 text-wattiva-light text-sm md:text-base">
@@ -73,7 +85,7 @@ export default function Slide10CTA() {
           opacity: { delay: 0.8, duration: 0.8 },
           y: { delay: 1.2, duration: 4, repeat: Infinity, ease: "easeInOut" },
         }}
-        className="absolute bottom-0 pointer-events-none"
+        className="absolute bottom-0 pointer-events-none hidden md:block"
         style={{ right: "clamp(1rem, 3vw, 5rem)" }}
       >
         <WattivaCharacter

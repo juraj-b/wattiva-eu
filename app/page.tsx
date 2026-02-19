@@ -4,12 +4,14 @@ import { useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSlideNavigation } from "@/hooks/useSlideNavigation";
 import SlideNavigation from "@/components/SlideNavigation";
+import SlideQuestionIsland from "@/components/SlideQuestionIsland";
 import { slideVariants } from "@/lib/animations";
 
 import Slide01Hook from "@/components/slides/Slide01Hook";
 import Slide02Problem from "@/components/slides/Slide02Problem";
 import Slide03Opportunity from "@/components/slides/Slide03Opportunity";
 import Slide04Economics from "@/components/slides/Slide04Economics";
+import Slide04bEconomicsDetail from "@/components/slides/Slide04bEconomicsDetail";
 import Slide05Solution from "@/components/slides/Slide05Solution";
 import Slide06Proof from "@/components/slides/Slide06Proof";
 import Slide06bEVCharging from "@/components/slides/Slide06bEVCharging";
@@ -24,6 +26,7 @@ const slides = [
   Slide02Problem,
   Slide03Opportunity,
   Slide04Economics,
+  Slide04bEconomicsDetail,
   Slide05Solution,
   Slide06Proof,
   Slide06bEVCharging,
@@ -59,6 +62,8 @@ export default function Home() {
           <CurrentSlide />
         </motion.div>
       </AnimatePresence>
+
+      <SlideQuestionIsland currentSlide={currentSlide} />
 
       <SlideNavigation
         currentSlide={currentSlide}

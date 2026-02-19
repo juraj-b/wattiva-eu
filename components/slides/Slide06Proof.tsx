@@ -39,7 +39,7 @@ export default function Slide06Proof() {
         variants={staggerContainer(0.12, 0.1)}
         initial="hidden"
         animate="visible"
-        className="h-full flex flex-col justify-center"
+        className="h-full max-md:h-auto flex flex-col justify-center"
       >
         {/* ── Main two-column grid ── */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-6 md:gap-8 lg:gap-10 items-center">

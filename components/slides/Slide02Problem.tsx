@@ -13,7 +13,7 @@ export default function Slide02Problem() {
         variants={staggerContainer(0.12, 0.1)}
         initial="hidden"
         animate="visible"
-        className="h-full flex flex-col justify-center"
+        className="h-full max-md:h-auto flex flex-col justify-center"
       >
         {/* Two-column grid — text left, image right */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-6 md:gap-8 lg:gap-10 items-center">
@@ -40,7 +40,7 @@ export default function Slide02Problem() {
               />
               <p
                 className="font-[family-name:var(--font-clash)] font-semibold text-wattiva-dark mt-1 md:mt-2"
-                style={{ fontSize: "clamp(0.75rem, 1.1vw, 1.25rem)" }}
+                style={{ fontSize: "clamp(0.875rem, 1.1vw, 1.25rem)" }}
               >
                 hours of negative or near-zero prices across major EU markets in 2025
               </p>
@@ -49,8 +49,8 @@ export default function Slide02Problem() {
             {/* Supporting text */}
             <motion.p
               variants={fadeIn}
-              className="text-wattiva-dark font-medium mt-4 md:mt-5 lg:mt-6 leading-relaxed"
-              style={{ fontSize: "clamp(0.8rem, 1.1vw, 1.25rem)" }}
+              className="text-wattiva-dark font-medium mt-4 md:mt-5 lg:mt-6 slide-copy leading-relaxed"
+              style={{ fontSize: "clamp(0.875rem, 1.1vw, 1.25rem)" }}
             >
               As renewables scale, expect deeper valleys and higher peaks.
               That spread is worth money — if you can shift load into valleys
@@ -86,7 +86,7 @@ export default function Slide02Problem() {
               alt="Energy price valleys — isometric illustration"
               width={1200}
               height={800}
-              className="w-full h-auto"
+              className="w-full h-auto max-md:max-w-[280px] max-md:mx-auto"
               style={{ maxWidth: "none" }}
               priority
             />

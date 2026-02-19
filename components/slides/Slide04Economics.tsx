@@ -12,7 +12,7 @@ export default function Slide04Economics() {
         variants={staggerContainer(0.15, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full"
+        className="flex flex-col justify-center h-full max-md:h-auto"
       >
         <motion.h2
           variants={fadeUp}
@@ -23,11 +23,11 @@ export default function Slide04Economics() {
         </motion.h2>
 
         {/* Comparison */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-8 md:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mt-6 md:mt-12">
           {/* Traditional — muted */}
           <motion.div
             variants={slideFromLeft}
-            className="rounded-2xl bg-wattiva-dark p-6 md:p-8 lg:p-10"
+            className="rounded-2xl bg-wattiva-dark p-4 md:p-8 lg:p-10"
           >
             <p className="text-wattiva-light text-xs font-semibold uppercase tracking-widest">
               Traditional MWh
@@ -50,7 +50,7 @@ export default function Slide04Economics() {
           {/* Flexible — vibrant */}
           <motion.div
             variants={slideFromRight}
-            className="rounded-2xl bg-gradient-to-br from-wattiva-primary to-wattiva-accent text-wattiva-light p-6 md:p-8 lg:p-10 shadow-lg shadow-wattiva-primary/20"
+            className="rounded-2xl bg-gradient-to-br from-wattiva-primary to-wattiva-accent text-wattiva-light p-4 md:p-8 lg:p-10 shadow-lg shadow-wattiva-primary/20"
           >
             <p className="text-wattiva-light/70 text-xs font-semibold uppercase tracking-widest">
               Flexible MWh
@@ -88,7 +88,7 @@ export default function Slide04Economics() {
 
         <motion.p
           variants={fadeIn}
-          className="text-wattiva-dark font-medium text-[1.5em] max-w-xl mt-6 md:mt-8 leading-relaxed"
+          className="text-wattiva-dark font-medium text-sm md:text-[1.5em] slide-copy mt-4 md:mt-8 leading-relaxed"
         >
           A flexible MWh sells at roughly 3× the margin of a traditional MWh.
           And you can offer it to customers at 30% lower price than standard rates.

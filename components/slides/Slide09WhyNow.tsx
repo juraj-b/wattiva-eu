@@ -26,7 +26,7 @@ export default function Slide09WhyNow() {
         variants={staggerContainer(0.18, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full"
+        className="flex flex-col justify-center h-full max-md:h-auto"
       >
         <motion.h2
           variants={fadeUp}
@@ -36,7 +36,7 @@ export default function Slide09WhyNow() {
           <span className="text-wattiva-primary">Now.</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-12">
           {trends.map((trend) => (
             <motion.div
               key={trend.title}

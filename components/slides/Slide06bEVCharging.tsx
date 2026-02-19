@@ -65,7 +65,7 @@ function CustomTooltip({
 
 function CustomLegend() {
   return (
-    <div className="flex items-center justify-center gap-5 md:gap-8 text-[10px] md:text-xs text-wattiva-dark/70 mb-1">
+    <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 md:gap-8 text-[10px] md:text-xs text-wattiva-dark/70 mb-1">
       <span className="flex items-center gap-1.5">
         <span
           className="inline-block w-3 h-3 rounded-sm"
@@ -94,7 +94,7 @@ function CustomLegend() {
 const stats = [
   {
     category: "Unmanaged",
-    style: "rounded-xl bg-wattiva-dark/5 border border-wattiva-dark/10 p-4 md:p-5",
+    style: "rounded-xl bg-wattiva-dark/5 border border-wattiva-dark/10 p-3 md:p-5",
     labelColor: "text-wattiva-dark/50",
     numColor: "text-wattiva-dark",
     descColor: "text-wattiva-dark/60",
@@ -106,7 +106,7 @@ const stats = [
   },
   {
     category: "Managed",
-    style: "rounded-xl bg-wattiva-dark text-wattiva-light p-4 md:p-5",
+    style: "rounded-xl bg-wattiva-dark text-wattiva-light p-3 md:p-5",
     labelColor: "text-wattiva-light/60",
     numColor: "text-wattiva-light",
     descColor: "text-wattiva-light/70",
@@ -118,7 +118,7 @@ const stats = [
   },
   {
     category: "Result",
-    style: "rounded-xl bg-gradient-to-br from-wattiva-primary to-wattiva-accent text-wattiva-light p-4 md:p-5",
+    style: "rounded-xl bg-gradient-to-br from-wattiva-primary to-wattiva-accent text-wattiva-light p-3 md:p-5",
     labelColor: "text-wattiva-light/60",
     numColor: "text-wattiva-light",
     descColor: "text-wattiva-light/80",
@@ -141,12 +141,12 @@ export default function Slide06bEVCharging() {
         variants={staggerContainer(0.12, 0.1)}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center h-full py-6 md:py-10"
+        className="flex flex-col justify-center h-full max-md:h-auto md:py-10"
       >
-        {/* Headline */}
+        {/* Headline — extra top margin to clear the question island */}
         <motion.h2
           variants={fadeUp}
-          className="font-[family-name:var(--font-clash)] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15] tracking-tight"
+          className="font-[family-name:var(--font-clash)] font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15] tracking-tight md:mt-8"
         >
           From 1.3 MW problem to{" "}
           <span className="text-wattiva-primary">2.6 MW asset.</span>
@@ -163,9 +163,11 @@ export default function Slide06bEVCharging() {
         {/* Chart */}
         <motion.div
           variants={fadeUp}
-          className="mt-4 md:mt-6 w-full flex-1 min-h-0 outline-none [&_svg]:outline-none [&_svg]:focus:outline-none"
+          className="mt-4 md:mt-6 w-full flex-1 min-h-[280px] md:min-h-0 outline-none [&_svg]:outline-none [&_svg]:focus:outline-none"
         >
-          <ResponsiveContainer width="100%" height="100%">
+          <div className="w-full h-full max-md:overflow-x-auto">
+            <div className="w-full h-full max-md:min-w-[560px]">
+              <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
               data={data}
               margin={{ top: 8, right: 12, left: 0, bottom: 0 }}
@@ -257,6 +259,8 @@ export default function Slide06bEVCharging() {
               />
             </ComposedChart>
           </ResponsiveContainer>
+            </div>
+          </div>
         </motion.div>
 
         {/* Stats row */}
