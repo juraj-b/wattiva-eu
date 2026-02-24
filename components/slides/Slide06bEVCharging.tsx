@@ -99,7 +99,7 @@ const stats = [
     numColor: "text-wattiva-dark",
     descColor: "text-wattiva-dark/60",
     rows: [
-      { num: "1,300 kW", desc: "peak during expensive hours" },
+      { num: "1.3 MW", desc: "peak during expensive hours" },
       { num: "410 MWh/mo", desc: "consumed at random times" },
       { num: "670 kW", desc: "average charging load — unbalanced" },
     ],

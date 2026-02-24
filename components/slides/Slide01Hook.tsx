@@ -31,7 +31,7 @@ export default function Slide01Hook() {
               className="font-[family-name:var(--font-clash)] font-semibold text-wattiva-light/60 tracking-wide mt-3"
               style={{ fontSize: "clamp(0.875rem, 1.2vw, 1.125rem)" }}
             >
-              DERMS for Innovative Energy Companies.
+              Virtual Power Plant Software for Innovative Energy Companies.
             </p>
           </motion.div>
 

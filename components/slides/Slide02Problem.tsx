@@ -57,13 +57,6 @@ export default function Slide02Problem() {
               and away from peaks. Your customers already own the assets to do this.
             </motion.p>
 
-            {/* Source */}
-            <motion.p
-              variants={fadeIn}
-              className="text-wattiva-dark/30 text-xs mt-3"
-            >
-              Source: Electricity Maps &ldquo;Grid in review 2025&rdquo;, Gridio
-            </motion.p>
           </div>
 
           {/* ── Right column — price valleys image ── */}
