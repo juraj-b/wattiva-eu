@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const DARK_SLIDES = [0, 6, 11];
+const DARK_SLIDES = [0, 6, 11, 12];
 const HIDE_DELAY = 3000;
 
 interface SlideNavigationProps {

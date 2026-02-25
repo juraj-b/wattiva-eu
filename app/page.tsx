@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSlideNavigation } from "@/hooks/useSlideNavigation";
 import SlideNavigation from "@/components/SlideNavigation";
 import SlideQuestionIsland from "@/components/SlideQuestionIsland";
+import MenuOverlay from "@/components/MenuOverlay";
 import { slideVariants } from "@/lib/animations";
 
 import Slide01Hook from "@/components/slides/Slide01Hook";
@@ -19,6 +20,7 @@ import Slide07WhatYouGet from "@/components/slides/Slide07WhatYouGet";
 import Slide08WhyNotBuild from "@/components/slides/Slide08WhyNotBuild";
 import Slide09WhyNow from "@/components/slides/Slide09WhyNow";
 import Slide10CTA from "@/components/slides/Slide10CTA";
+import Slide12AboutUs from "@/components/slides/Slide12AboutUs";
 import Slide11TechAppendix from "@/components/slides/Slide11TechAppendix";
 
 const slides = [
@@ -34,6 +36,7 @@ const slides = [
   Slide08WhyNotBuild,
   Slide09WhyNow,
   Slide10CTA,
+  Slide12AboutUs,
   Slide11TechAppendix,
 ];
 
@@ -64,6 +67,8 @@ export default function Home() {
       </AnimatePresence>
 
       <SlideQuestionIsland currentSlide={currentSlide} />
+
+      <MenuOverlay currentSlide={currentSlide} goToSlide={goToSlide} />
 
       <SlideNavigation
         currentSlide={currentSlide}

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const DARK_SLIDES = [0, 6, 11];
+const DARK_SLIDES = [0, 6, 11, 12];
 
 const SLIDE_QUESTIONS = [
   "What is this?",
@@ -19,6 +19,7 @@ const SLIDE_QUESTIONS = [
   "Why can\u2019t we do this ourselves?",
   "Why now?",
   "What\u2019s the next step?",
+  "Who are we?",
   "What\u2019s under the hood?",
 ];
 
