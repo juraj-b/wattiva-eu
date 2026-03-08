@@ -62,7 +62,7 @@ export default function Slide10CTA() {
           </motion.div>
 
           <motion.div variants={scaleUp} className="mt-8">
-            <a href="mailto:hello@wattiva.eu">
+            <a href="https://calendar.app.google/pL72fcziJn3S5jqM9" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="animate-pulse-glow text-base px-10"

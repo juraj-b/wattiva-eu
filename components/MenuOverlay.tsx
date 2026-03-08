@@ -115,15 +115,46 @@ export default function MenuOverlay({
     };
   }, [isOpen]);
 
-  // Close on Escape
+  // Block all slide-navigation input when menu is open (keyboard, wheel, touch)
+  // Uses capture phase to intercept before useSlideNavigation handlers fire
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
+    if (!isOpen) return;
+
+    const NAV_KEYS = new Set([
+      "ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown",
+      " ", "PageDown", "PageUp", "Backspace",
+    ]);
+
+    const blockKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        close();
+        e.stopPropagation();
+        return;
+      }
+      if (NAV_KEYS.has(e.key)) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
     };
-    if (isOpen) {
-      window.addEventListener("keydown", handleKey);
-      return () => window.removeEventListener("keydown", handleKey);
-    }
+
+    const blockWheel = (e: WheelEvent) => {
+      e.stopPropagation();
+    };
+
+    const blockTouch = (e: TouchEvent) => {
+      e.stopPropagation();
+    };
+
+    window.addEventListener("keydown", blockKey, true);
+    window.addEventListener("wheel", blockWheel, true);
+    window.addEventListener("touchstart", blockTouch, true);
+    window.addEventListener("touchend", blockTouch, true);
+    return () => {
+      window.removeEventListener("keydown", blockKey, true);
+      window.removeEventListener("wheel", blockWheel, true);
+      window.removeEventListener("touchstart", blockTouch, true);
+      window.removeEventListener("touchend", blockTouch, true);
+    };
   }, [isOpen, close]);
 
   return (
